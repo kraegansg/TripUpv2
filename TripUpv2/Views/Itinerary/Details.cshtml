@@ -1,0 +1,58 @@
+﻿@model TripUp.Models.ItineraryDetail
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ItineraryDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ItineraryId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ItineraryId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ItineraryName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ItineraryName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PitStop)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PitStop)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TravelDistance)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TravelDistance)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TravelTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TravelTime)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ItineraryId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

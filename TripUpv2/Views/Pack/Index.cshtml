@@ -1,0 +1,63 @@
+﻿@model IEnumerable<TripUp.Models.PackListItem>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PackId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PackName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Clothes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BathItems)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Essentials)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Other)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PackId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PackName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Clothes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BathItems)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Essentials)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Other)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.PackId }) |
+            @Html.ActionLink("Details", "Details", new { id = item.PackId }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.PackId })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,66 @@
+﻿@model TripUp.Models.PackDetail
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PackDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PackId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PackId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PackName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PackName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Clothes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Clothes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BathItems)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BathItems)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Essentials)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Essentials)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Other)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Other)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PackId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
