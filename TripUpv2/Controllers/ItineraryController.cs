@@ -30,7 +30,7 @@ namespace TripUpv2.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(ItineraryCreate model)
         {
-            if (ModelState.IsValid) return View(model);
+            if (!ModelState.IsValid) return View(model);
 
             var service = CreateItineraryService();
 

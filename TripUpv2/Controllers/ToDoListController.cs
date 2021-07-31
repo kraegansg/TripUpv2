@@ -32,7 +32,7 @@ namespace TripUpv2.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(ToDoListCreate model)
         {
-            if (ModelState.IsValid) return View(model);
+            if (!ModelState.IsValid) return View(model);
 
             var service = CreateToDoListService();
 

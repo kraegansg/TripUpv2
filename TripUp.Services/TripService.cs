@@ -24,6 +24,7 @@ namespace TripUp.Services
                 new Trip()
                 {
                     OwnerId = _userId,
+
                     TripName = model.TripName,
                     Destination = model.Destination,
                     StartingLocation = model.StartingLocation,

@@ -30,7 +30,7 @@ namespace TripUpv2.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(TripCreate model)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
                 return View(model);
             }

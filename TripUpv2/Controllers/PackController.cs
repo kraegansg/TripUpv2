@@ -31,7 +31,7 @@ namespace TripUpv2.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(PackCreate model)
         {
-            if (ModelState.IsValid) return View(model);
+            if (!ModelState.IsValid) return View(model);
 
             var service = CreatePackService();
 
